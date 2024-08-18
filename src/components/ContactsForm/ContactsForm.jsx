@@ -10,14 +10,14 @@ const ContactsForm = () => {
   const [number, setNumber] = useState('');
 
   const handleNumberChange = e => {
-    // Замінює все, що не є цифрами
+   
     const onlyNumbers = e.target.value.replace(/\D/g, '');
     setNumber(onlyNumbers);
   };
 
   const handleSubmit = e => {
     e.preventDefault();
-    if (!name || !number) return; // Перевірка на порожні значення
+    if (!name || !number) return; 
     dispatch(addContact({ id: Date.now(), name, number }));
     setName('');
     setNumber('');
@@ -38,11 +38,11 @@ const ContactsForm = () => {
       <label className={styles.label}>
         Number
         <input
-          type="text" // Перемикаємося на text, якщо використовуємо JavaScript для обробки
+          type="text" 
           value={number}
           onChange={handleNumberChange}
           className={styles.input}
-          pattern="[0-9]*" // Дозволити тільки цифри
+          pattern="[0-9]*" 
           title="Please enter a valid phone number"
           required
         />
