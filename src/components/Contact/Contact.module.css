@@ -1,6 +1,23 @@
 .contact {
+    width: 400px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    font-size: 16px;
-    color: #333;
+    padding: 10px;
+    border: 1px solid #7a7a7a;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    }
+
+button {
+    background-color: #ff4d4d;
+    color: black;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    }
+
+button:hover {
+    background-color: #ff1a1a;
 }
