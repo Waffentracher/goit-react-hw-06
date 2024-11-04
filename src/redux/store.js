@@ -5,9 +5,9 @@ import contactsReducer from "./contactsSlice";
 import filtersReducer from "./filtersSlice";
 
 const persistConfig = {
-  key: "root",
+  key: "contacts",
   storage,
-  whitelist: ["contacts"],
+  whitelist: ["items"],
 };
 
 const persistedContactsReducer = persistReducer(persistConfig, contactsReducer);
@@ -21,7 +21,6 @@ export const store = configureStore({
     getDefaultMiddleware({
       serializableCheck: {
         ignoredActions: ["persist/PERSIST", "persist/REHYDRATE"],
-        ignoredPaths: ["persist.register"],
       },
     }),
 });
